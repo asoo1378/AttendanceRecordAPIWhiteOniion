@@ -18,5 +18,7 @@ namespace AttendanceRecord.Domain
         [StringLength(20, MinimumLength = 4)]
         public string EmployeeCode { get; set; } // Unique code for the employee
 
+        public List<Attendance> AttendanceRecords { get; set; }
+        = new List<Attendance>();
     }
 }

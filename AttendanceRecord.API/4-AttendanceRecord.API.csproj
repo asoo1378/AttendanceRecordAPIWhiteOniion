@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AttendanceRecord.Application\AttendanceRecord.Application.csproj" />
-    <ProjectReference Include="..\AttendanceRecord.Infrastructure\AttendanceRecord.Infrastructure.csproj" />
+    <ProjectReference Include="..\AttendanceRecord.Application\2-AttendanceRecord.Application.csproj" />
+    <ProjectReference Include="..\AttendanceRecord.Infrastructure\3-AttendanceRecord.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

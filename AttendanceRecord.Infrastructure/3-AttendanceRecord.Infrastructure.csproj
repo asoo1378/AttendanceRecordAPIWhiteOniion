@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AttendanceRecord.Application\AttendanceRecord.Application.csproj" />
+    <ProjectReference Include="..\AttendanceRecord.Application\2-AttendanceRecord.Application.csproj" />
   </ItemGroup>
 
 </Project>

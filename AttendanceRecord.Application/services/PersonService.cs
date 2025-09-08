@@ -21,6 +21,8 @@ namespace AttendanceRecord.Application.services
             return person;
         }
 
+
+
         public async Task<IEnumerable<Person>> GetAllPersonsAsync()
         {
             return await _personRepository.GetAllAsync();

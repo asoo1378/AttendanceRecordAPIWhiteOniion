@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttendanceRecord.Domain", "AttendanceRecord.Domain\AttendanceRecord.Domain.csproj", "{C743DF60-F0CE-45C0-962D-95C854D08A16}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1-AttendanceRecord.Domain", "AttendanceRecord.Domain\1-AttendanceRecord.Domain.csproj", "{C743DF60-F0CE-45C0-962D-95C854D08A16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttendanceRecord.Application", "AttendanceRecord.Application\AttendanceRecord.Application.csproj", "{B1D085FD-7241-4C4B-98DB-304CC7ED91AF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2-AttendanceRecord.Application", "AttendanceRecord.Application\2-AttendanceRecord.Application.csproj", "{B1D085FD-7241-4C4B-98DB-304CC7ED91AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttendanceRecord.Infrastructure", "AttendanceRecord.Infrastructure\AttendanceRecord.Infrastructure.csproj", "{F935A572-02DB-4C38-9664-9C5AD96D08AC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3-AttendanceRecord.Infrastructure", "AttendanceRecord.Infrastructure\3-AttendanceRecord.Infrastructure.csproj", "{F935A572-02DB-4C38-9664-9C5AD96D08AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttendanceRecord.API", "AttendanceRecord.API\AttendanceRecord.API.csproj", "{33C71352-E506-4BFC-AF10-D089868E180B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4-AttendanceRecord.API", "AttendanceRecord.API\4-AttendanceRecord.API.csproj", "{33C71352-E506-4BFC-AF10-D089868E180B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

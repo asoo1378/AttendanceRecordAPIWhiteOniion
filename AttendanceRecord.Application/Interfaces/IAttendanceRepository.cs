@@ -18,7 +18,8 @@ namespace AttendanceRecord.Application.Interfaces
         Task<Attendance?> GetLatestUnfinishedRecordAsync(int personId); 
         Task<IEnumerable<Attendance>> GetByPersonIdAsync(int personId);
 
-
+        
+            
 
     }
 }
