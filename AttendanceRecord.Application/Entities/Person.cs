@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AttendanceRecord.Domain
 {
-    public class Person
+    public class Person  
     {
         [Key]
         public int Id { get; set; } // Primary key

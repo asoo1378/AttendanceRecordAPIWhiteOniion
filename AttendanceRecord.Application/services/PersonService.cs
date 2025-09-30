@@ -1,5 +1,7 @@
-﻿using AttendanceRecord.Application.Interfaces;
+﻿using AttendanceRecord.Application.Dto;
+using AttendanceRecord.Application.Interfaces;
 using AttendanceRecord.Domain;
+using AutoMapper;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -8,10 +10,12 @@ namespace AttendanceRecord.Application.services
     public class PersonService
     {
         private readonly IPersonRepository _personRepository;
+        private readonly IMapper _mapper; 
 
-        public PersonService(IPersonRepository personRepository)
+        public PersonService(IPersonRepository personRepository, IMapper mapper)
         {
             _personRepository = personRepository;
+            _mapper = mapper;   
         }
 
         public async Task<Person> CreatePersonAsync(Person person)
@@ -23,14 +27,25 @@ namespace AttendanceRecord.Application.services
 
 
 
-        public async Task<IEnumerable<Person>> GetAllPersonsAsync()
+        public async Task<IEnumerable<PersonDto>> GetAllPersonsAsync()
         {
-            return await _personRepository.GetAllAsync();
+            var personEntities = await _personRepository.GetAllAsync();
+            var personDtos = _mapper.Map<IEnumerable<PersonDto>>(personEntities);
+            return personDtos;
         }
 
         public async Task<Person> GetPersonByIdAsync(int id)
         {
-            return await _personRepository.GetByIdAsync(id);
+            var personEntry = await _personRepository.GetByIdAsync(id);
+
+            if (personEntry == null )
+            {
+                return null;
+            }
+
+            var personDto = _mapper.Map<PersonDto>(personEntry);
+            return personEntry;
+            
         }
 
         public async Task UpdatePersonAsync(Person person)
@@ -38,6 +53,7 @@ namespace AttendanceRecord.Application.services
             _personRepository.Update(person);
             await _personRepository.SaveChangesAsync();
         }
+
 
         public async Task DeletePersonAsync(int id)
         {
