@@ -25,7 +25,7 @@ builder.Services.AddScoped<PersonService>();
 builder.Services.AddScoped<AttendanceService>();
 
 // Registering Automapper
-builder.Services.AddAutoMapper(typeof(MappingProfile));
+builder.Services.AddAutoMapper(typeof(AttendanceRecord.Application.Mappings.MappingProfile));
 
 
 var app = builder.Build();

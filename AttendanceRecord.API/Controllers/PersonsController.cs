@@ -16,10 +16,12 @@ namespace AttendanceRecord.API.Controllers
     {
         private readonly PersonService _personService;
         private readonly IMapper _mapper;
+         
+
 
         public PersonsController(PersonService personService, IMapper mapper)
         {
-            // اینجا از حرف p کوچک برای پارامتر ورودی استفاده می‌کنیم
+            
             _personService = personService;
             _mapper = mapper;
         }
@@ -41,7 +43,7 @@ namespace AttendanceRecord.API.Controllers
 
             if (person == null)
             {
-                return NotFound(); // اگه پیدا نشد، خطای 404 برمی‌گردونه
+                return NotFound(); 
             }
 
             var personDto = _mapper.Map<PersonDto>(person);
