@@ -1,6 +1,7 @@
 using AttendanceRecord.Application.Interfaces;
 using AttendanceRecord.Application.Mappings;
 using AttendanceRecord.Application.services;
+using AttendanceRecord.Infrastructure.Extantions;
 using AttendanceRecord.Infrastructure.Persistence;
 using AttendanceRecord.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -12,6 +13,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+var assemblyapp = typeof(AttendanceRecord.Application.services.PersonService).Assembly;
+var assemblyIntra = typeof(AttendanceRecord.Infrastructure.Repositories.PersonRepository).Assembly;
+
+
+builder.Services.AddRepositories(assemblyIntra);
+builder.Services.AddServices(assemblyapp);
 
 // Registering the DbContext with a connection string
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
